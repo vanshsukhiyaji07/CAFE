@@ -1,0 +1,229 @@
+/* ===== Contact Grid ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.contact-info>p {
+    color: var(--text-medium, #4a4a68);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* ===== Info Cards ===== */
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: var(--bg-cream, #FDF8F3);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary, #6F4E37), var(--primary-light, #D4A574));
+    color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.info-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: var(--text-dark, #1a1a2e);
+}
+
+.info-content p {
+    color: var(--text-dark, #1a1a2e);
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.info-content span {
+    color: var(--text-light, #6b7280);
+    font-size: 0.9rem;
+}
+
+/* ===== Form Tabs ===== */
+.form-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.form-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    background: var(--bg-cream, #FDF8F3);
+    border: 2px solid var(--border-light, #e5e7eb);
+    border-radius: 12px;
+    font-weight: 500;
+    color: var(--text-medium, #4a4a68);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-tab:hover {
+    border-color: var(--primary, #6F4E37);
+    color: var(--primary, #6F4E37);
+}
+
+.form-tab.active {
+    background: var(--primary, #6F4E37);
+    border-color: var(--primary, #6F4E37);
+    color: white;
+}
+
+/* ===== Contact Forms ===== */
+.contact-forms {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form,
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-dark, #1a1a2e);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 2px solid var(--border-light, #e5e7eb);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-light, #D4A574);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button,
+.reservation-form button {
+    margin-top: 10px;
+}
+
+/* ===== Form Success ===== */
+.form-success {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary, #6F4E37), var(--primary-light, #D4A574));
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+}
+
+.form-success h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--text-dark, #1a1a2e);
+}
+
+.form-success p {
+    color: var(--text-medium, #4a4a68);
+}
+
+/* ===== Map Section ===== */
+.map-section {
+    margin-top: 0;
+}
+
+.map-container {
+    width: 100%;
+    background: var(--bg-cream, #FDF8F3);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-tabs {
+        flex-direction: column;
+    }
+
+    .contact-forms {
+        padding: 24px;
+    }
+
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+}
